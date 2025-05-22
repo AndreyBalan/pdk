@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    @@include('html/_head-ar.htm',{ "title":"PDK | اتصالات" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_popup-ar.htm',{})
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__menu menu">
+                        <a href="/ar">
+                            <img src="../@img/logo.png" class="header__logo" alt="PDK" />
+                        </a>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".benefits" class="menu__link"
+                                        >المزايا</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".features" class="menu__link">الميز</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".technology" class="menu__link"
+                                        >التكنولوج</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".solutions" class="menu__link"
+                                        >الحل
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/ar" data-goto=".parthnership" class="menu__link"
+                                        >الشراكة</a
+                                    >
+                                </li>
+                                <li class="menu__item">
+                                    <a href="contacts.html" class="menu__link">اتصال</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="menu__btns">
+                            <button type="button" class="menu__icon icon-menu">
+                                <span></span> <span class="sr-only">Menu</span>
+                            </button>
+                            <div class="language-selector">
+                                <input
+                                    type="checkbox"
+                                    id="language-toggle"
+                                    class="language-selector__toggle" />
+                                <label for="language-toggle" class="language-selector__current">
+                                    <span class="language-selector__code">AR</span>
+                                </label>
+                                <div class="language-selector__dropdown">
+                                    <a href="/" class="language-selector__item">
+                                        <span class="language-selector__code">RU</span>
+                                    </a>
+                                    <a href="/en" class="language-selector__item">
+                                        <span class="language-selector__code">EN</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="page">
+                <section class="contact">
+                    <div class="contact__container">
+                        <div class="contact__wrapper">
+                            <form
+                                class="contact__form"
+                                action="files/sendmail/sendmail.php"
+                                method="POST"
+                                data-popup-message="#form-message"
+                                data-ajax>
+                                <h2 class="contact__title">ابدأ بتجربة مجانية</h2>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    placeholder="الاسم " />
+                                <input
+                                    type="text"
+                                    id="surname"
+                                    name="surname"
+                                    required
+                                    placeholder="اللقب " />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="البريد الإلكتروني " />
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="رقم الهاتف " />
+
+                                <div class="contact__form-row contact__form-row-checkbox">
+                                    <input
+                                        type="checkbox"
+                                        class="custom-checkbox"
+                                        id="check"
+                                        name="check"
+                                        required
+                                        value="yes" />
+                                    <label for="check"></label>
+                                    <p>
+                                        لقد قرأت سياسة الخصوصية وشروط استخدام Bellumaco وأوافق عليها
+                                    </p>
+                                </div>
+
+                                <button class="form-btn btn solutions__btn btn-text" type="submit">
+                                    <span>إرسال</span>
+                                </button>
+                            </form>
+                            <div class="contact__info">
+                                <h2 class="contact__title">اتصل</h2>
+                                <p class="contact__desc">
+                                    اتصل بنا على بيانات الاتصال الموضحة في هذه الصفحة وسنرد عليك على
+                                    الفور!
+                                </p>
+                                <h3 class="contact__heading">Bellumaco</h3>
+                                <p class="contact__info-desc address">
+                                    الإمارات العربية المتحدة، دبي، برج إيريس باي، مكتب С-42
+                                </p>
+                                <h3 class="contact__heading">دعم العملاء::</h3>
+                                <p class="contact__info-desc mail">bellumaco.ccrms@gmail.com</p>
+
+                                <p class="contact__info-desc phone">+971 5 066 34653</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__logo">
+                        <img src="../@img/logo.png" alt="PDK" />
+                    </div>
+                    <div class="footer__wrapper">
+                        <div class="footer__contacts">
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">
+                                    BELLUMACO COST CONTROL & RISK MANAGEMENT SERVICES L.L.C
+                                </p>
+                                <span class="footer__contacts-desc"
+                                    >الإمارات العربية المتحدة، دبي، برج إيريس باي، مكتب С-42</span
+                                >
+                            </div>
+                            <div class="footer__contacts-item">
+                                <p class="footer__contacts-heading">أسئلة عامة:</p>
+                                <span class="footer__contacts-desc">bellumaco.ccrms@gmail.com</span>
+                                <span class="footer__contacts-desc">+971 5 066 34653</span>
+                            </div>
+                        </div>
+                        <div class="footer__nav" data-da=".footer__wrapper, 767, 0">
+                            <div class="footer__nav-item">
+                                <p class="footer__contacts-heading">منتجات</p>
+                                <a href="/ar" class="footer__nav-link" data-goto=".benefits"
+                                    >المزايا</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".features"
+                                    >الميز</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".technology"
+                                    >التكنولوج</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".solutions"
+                                    >الحل</a
+                                >
+                                <a href="/ar" class="footer__nav-link" data-goto=".parthnership"
+                                    >الشراكة</a
+                                >
+                                <a href="contacts.html" class="footer__nav-link">اتصال</a>
+                            </div>
+                            <div class="footer__nav-item">
+                                <p class="footer__contacts-heading">موارد</p>
+                                <a href="contacts.html" class="footer__nav-link">مركز المساعدة</a>
+                                <a href="legal.html" class="footer__nav-link">قانوني</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <span
+                        >&copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        Bellumaco</span
+                    >
+                </div>
+            </footer>
+        </div>
+        <script src="../js/app.min.js"></script>
+    </body>
+</html>

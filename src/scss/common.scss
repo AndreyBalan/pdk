@@ -1,0 +1,129 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+section {
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+}
+
+// Title
+.title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121.906%;
+    background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include adaptiveValue("font-size", 36, 23);
+    @include adaptiveValue("max-width", 976, 600);
+    @media (max-width: $tablet) {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+// Desc
+.section__desc {
+    font-style: normal;
+    font-weight: 400;
+    line-height: toRem(24); /* 150% */
+    @include adaptiveValue("font-size", 16, 12);
+    @include adaptiveValue("margin-top", 30, 10);
+    @include adaptiveValue("max-width", 860, 600);
+    @media (max-width: $tablet) {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+// btn
+.btn {
+    position: relative;
+    display: inline-flex;
+    padding: toRem(6) toRem(10);
+    align-items: center;
+    gap: toRem(12);
+    flex-shrink: 0;
+    background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+    color: #fff;
+    font-size: toRem(20);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-left: toRem(12) solid #fff;
+    border-top: toRem(12) solid #fff;
+    @media (max-width: $tablet) {
+        border-left: none;
+        border-top: none;
+    }
+    &__icon {
+        background: #fff;
+        border-radius: 100%;
+        padding: toRem(10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        svg {
+            width: toRem(18);
+            height: toRem(18);
+            transition:
+                transform 0.5s ease,
+                opacity 0.3s ease;
+            position: relative;
+            z-index: 2;
+            @media (max-width: $mobile) {
+                width: toRem(12);
+                height: toRem(12);
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #fff;
+            z-index: 1;
+            background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.9478 1.32329C17.9478 0.771009 17.5001 0.323293 16.9478 0.323293L7.94779 0.323294C7.39551 0.323294 6.94779 0.771009 6.94779 1.32329C6.94779 1.87558 7.39551 2.32329 7.94779 2.32329L15.9478 2.32329L15.9478 10.3233C15.9478 10.8756 16.3955 11.3233 16.9478 11.3233C17.5001 11.3233 17.9478 10.8756 17.9478 10.3233L17.9478 1.32329ZM1 17.2711L1.70711 17.9782L17.6549 2.0304L16.9478 1.32329L16.2407 0.616187L0.292893 16.564L1 17.2711Z' fill='black'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-100%, 100%);
+            transition: transform 0.5s ease;
+        }
+    }
+
+    &:hover {
+        .btn__icon {
+            svg {
+                transform: translate(50%, -50%);
+                opacity: 0;
+            }
+
+            &::after {
+                transform: translate(0, 0);
+            }
+        }
+    }
+    span {
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+}
+
+// sr only
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

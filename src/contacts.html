@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+    @@include('html/_head.htm',{ "title":"PDK | Контакты" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_popup.htm',{})
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__menu menu">
+                        <a href="/">
+                            <img src="@img/logo.png" class="header__logo" alt="Defdil" />
+                        </a>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="/" class="menu__link">Преимущества</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/" class="menu__link">Особенности</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/" class="menu__link">Технологии</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/" class="menu__link">Решения </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="/" class="menu__link">Сотрудничество</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="contact.html" class="menu__link active">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="menu__btns">
+                            <button type="button" class="menu__icon icon-menu">
+                                <span></span> <span class="sr-only">Menu</span>
+                            </button>
+                            <div class="language-selector">
+                                <input
+                                    type="checkbox"
+                                    id="language-toggle"
+                                    class="language-selector__toggle" />
+                                <label for="language-toggle" class="language-selector__current">
+                                    <span class="language-selector__code">RU</span>
+                                </label>
+                                <div class="language-selector__dropdown">
+                                    <a href="/en" class="language-selector__item">
+                                        <span class="language-selector__code">EN</span>
+                                    </a>
+                                    <a href="/ar" class="language-selector__item">
+                                        <span class="language-selector__code">AR</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="page">
+                <section class="contact">
+                    <div class="contact__container">
+                        <div class="contact__wrapper">
+                            <form
+                                class="contact__form"
+                                action="files/sendmail/sendmail.php"
+                                method="POST"
+                                data-popup-message="#form-message"
+                                data-ajax>
+                                <h2 class="contact__title">Начните с бесплатной демонстрации</h2>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    placeholder="Имя " />
+                                <input
+                                    type="text"
+                                    id="surname"
+                                    name="surname"
+                                    required
+                                    placeholder="Фамилия " />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    placeholder="E-mail " />
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="Номер телефона " />
+
+                                <div class="contact__form-row contact__form-row-checkbox">
+                                    <input
+                                        type="checkbox"
+                                        class="custom-checkbox"
+                                        id="check"
+                                        name="check"
+                                        required
+                                        value="yes" />
+                                    <label for="check"></label>
+                                    <p>
+                                        Я прочитал и согласен с политикой конфиденциальности и
+                                        условиями использования Bellumaco
+                                    </p>
+                                </div>
+
+                                <button class="form-btn btn solutions__btn btn-text" type="submit">
+                                    <span>Отправить запрос</span>
+                                </button>
+                            </form>
+                            <div class="contact__info">
+                                <h2 class="contact__title">Свяжитесь с нами</h2>
+                                <p class="contact__desc">
+                                    Свяжитесь с нами по контактным данным, указанным на этой
+                                    странице, и мы ответим вам незамедлительно!
+                                </p>
+                                <h3 class="contact__heading">Bellumaco</h3>
+                                <p class="contact__info-desc address">
+                                    UAE, Dubai, Iris Bay Tower, office С-42
+                                </p>
+                                <h3 class="contact__heading">Поддержка клиентов:</h3>
+                                <p class="contact__info-desc mail">bellumaco.ccrms@gmail.com</p>
+
+                                <p class="contact__info-desc phone">+971 5 066 34653</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>

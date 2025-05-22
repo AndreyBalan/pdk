@@ -1,0 +1,162 @@
+//====================================================================================================
+//====================================================================================================
+.footer {
+    background: #f3f3f3;
+    padding-top: toRem(20);
+    // .footer__container
+    &__container {
+    }
+    // .footer__logo
+    &__logo {
+        @include adaptiveValue("max-width", 200, 114);
+        max-height: toRem(50);
+        img {
+            @include adaptiveValue("max-width", 200, 114);
+        }
+    }
+    // .footer__wrapper
+    &__wrapper {
+        @include adaptiveValue("margin-top", 60, 40);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // justify-content: space-between;
+        @include adaptiveValue("gap", 40, 0);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media (max-width: $mobile) {
+            margin-top: toRem(0);
+        }
+    }
+    // .footer__contacts
+    &__contacts {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        @include adaptiveValue("gap", 20, 16);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    // .footer__contacts-item
+    &__contacts-item {
+        max-width: toRem(360);
+        @media (max-width: $tablet) {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+    // .footer__contacts-heading
+    &__contacts-heading {
+        color: #000;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        @include adaptiveValue("font-size", 20, 16);
+        @media (max-width: $mobile) {
+            margin-top: toRem(40);
+        }
+    }
+    // .footer__contacts-desc
+    &__contacts-desc {
+        color: #5a5a5a;
+        display: block;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: toRem(8);
+        @include adaptiveValue("font-size", 16, 12);
+    }
+    // .footer__nav
+    &__nav {
+        display: flex;
+        width: toRem(580);
+        @include adaptiveValue("gap", 20, 16);
+        @media (max-width: $tablet) {
+            justify-content: space-between;
+            max-width: 100%;
+            width: 100%;
+            margin-top: toRem(40);
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: toRem(0);
+            margin-bottom: toRem(0);
+        }
+    }
+    // .footer__nav-item
+    &__nav-item {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(8);
+        width: 100%;
+        a {
+            display: inline-block;
+            width: fit-content;
+            width: -moz-fit-content; /* Для Firefox */
+            width: -webkit-fit-content; /* Для Safari */
+            position: relative;
+            @media (any-hover: hover) {
+                &:hover {
+                    &::after {
+                        transform: scaleX(1);
+                        opacity: 1;
+                        transform-origin: left;
+                    }
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: toRem(-5);
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(202deg, #071739 2.71%, #4b6382 85.56%);
+                transform: scaleX(0);
+                opacity: 0;
+                transition:
+                    transform 0.3s ease,
+                    opacity 0.3s ease;
+                transform-origin: right;
+            }
+        }
+    }
+    // .footer__nav-heading
+    &__nav-heading {
+        color: rgba(0, 0, 0, 0.96);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    // .footer__nav-link
+    &__nav-link {
+        color: rgba(0, 0, 0, 0.96);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: inline-block;
+        @include adaptiveValue("font-size", 18, 12);
+    }
+    &__copyright {
+        color: #4f615d;
+        text-align: center;
+        font-family: "Inter";
+        font-size: toRem(15);
+        font-style: normal;
+        font-weight: 400;
+        margin-top: toRem(60);
+        padding: toRem(16) toRem(0);
+        border-top: 1px solid #838383;
+    }
+}
+
+//====================================================================================================
+
+//====================================================================================================
